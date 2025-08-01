@@ -175,3 +175,6 @@ Desktop.ini
 
 # Static files (optional - uncomment if you collect static files in production)
 # staticfiles/
+
+# Project-specific data (contains user keys and sensitive data)
+project_data/
