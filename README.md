@@ -24,11 +24,17 @@ This is a Django project focused on digital signatures, part of a cybersecurity 
    ```bash
    pipenv shell
    ```
-4. Run migrations:
+4. Create the required directories and files:
+   ```bash
+   mkdir -p project_data
+   mkdir -p json_data
+   echo '{}' > json_data/registration.json
+   ```
+5. Run migrations:
    ```bash
    python manage.py migrate
    ```
-5. Start the development server:
+6. Start the development server:
    ```bash
    python manage.py runserver
    ```

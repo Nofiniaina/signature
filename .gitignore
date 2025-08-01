@@ -178,3 +178,5 @@ Desktop.ini
 
 # Project-specific data (contains user keys and sensitive data)
 project_data/
+
+json_data/
