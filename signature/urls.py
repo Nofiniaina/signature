@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('generate/', include('generate_rsa.urls')),
     path('register/', include('register_users.urls')),
     path('admin/', admin.site.urls),
 ]
