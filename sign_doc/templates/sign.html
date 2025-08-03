@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Signing</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sign_doc/sign.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Signing</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="text_file">Select the text file:</label>
+                <input type="file" id="text_file" name="text_file" required>
+            </div>
+
+            <div class="form-group">
+                <label for="private_key">Select the private key:</label>
+                <input type="file" id="private_key" name="private_key" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Sign the Document</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

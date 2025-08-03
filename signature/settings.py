@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'register_users',
     'generate_rsa',
+    'sign_doc',
 ]
 
 MIDDLEWARE = [
