@@ -29,4 +29,12 @@ def register(request):
                 filename = f"{username}.pem"
                 register_user(username, filename)
 
+                user_dir = os.path.join('public_key_data', username)
+                os.makedirs(user_dir, exist_ok=True)
+                
+                file_path = os.path.join(user_dir, filename)
+                with open(file_path, 'wb+') as destination:
+                    for chunk in file.chunks():
+                        destination.write(chunk)
+
     return render(request, 'register/register.html') 
